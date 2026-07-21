@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color"
+        content="#0f172a">
+
+  <meta name="description"
+        content="Deepak Dabi Deals - Discover useful products, shopping guides and best deals.">
+
+  <title>Deepak Dabi Deals | Smart Shopping & Best Deals</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest"
+        href="manifest.json">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="topbar">
+
+  <a href="index.html"
+     class="brand">
+
+    ⚡ Deepak Dabi
+    <span>Deals</span>
+
+  </a>
+
+  <button class="menu"
+          onclick="toggleMenu()">
+
+    ☰
+
+  </button>
+
+  <nav id="nav">
+
+    <a href="#home">
+      Home
+    </a>
+
+    <a href="#deals">
+      Deals
+    </a>
+
+    <a href="#categories">
+      Categories
+    </a>
+
+    <a href="pages/about.html">
+      About
+    </a>
+
+    <a href="pages/contact.html">
+      Contact
+    </a>
+
+  </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home"
+         class="hero">
+
+  <div class="hero-content">
+
+    <span class="eyebrow">
+      SMART SHOPPING • HONEST PICKS
+    </span>
+
+    <h1>
+      Find Products
+      <br>
+      Worth Buying.
+    </h1>
+
+    <p>
+      Discover useful products, buying guides,
+      comparisons and exciting deals in one place.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#deals"
+         class="btn primary">
+
+        🔥 Explore Deals
+
+      </a>
+
+      <a href="#categories"
+         class="btn ghost">
+
+        🛍️ Browse Categories
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-section">
+
+  <div class="search-box">
+
+    🔍
+
+    <input
+      id="search"
+      type="search"
+      placeholder="Search products, gadgets, tools..."
+      oninput="renderProducts()"
+    >
+
+  </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories"
+         class="section">
+
+  <div class="section-head">
+
+    <div>
+
+      <span class="eyebrow">
+        EXPLORE
+      </span>
+
+      <h2>
+        Shop by Category
+      </h2>
+
+    </div>
+
+  </div>
+
+  <div id="categoryBar"
+       class="chips">
+
+  </div>
+
+</section>
+
+
+<!-- ================= DEALS ================= -->
+
+<section id="deals"
+         class="section">
+
+  <div class="section-head">
+
+    <div>
+
+      <span class="eyebrow">
+        FEATURED PICKS
+      </span>
+
+      <h2>
+        Popular Products
+      </h2>
+
+    </div>
+
+    <span id="count"
+          class="muted">
+
+    </span>
+
+  </div>
+
+
+  <div id="products"
+       class="grid">
+
+  </div>
+
+</section>
+
+
+<!-- ================= TRUST ================= -->
+
+<section class="section trust">
+
+  <div class="trust-card">
+
+    <div class="trust-icon">
+      🔎
+    </div>
+
+    <h3>
+      Research First
+    </h3>
+
+    <p>
+      Compare features and check
+      current merchant details before buying.
+    </p>
+
+  </div>
+
+
+  <div class="trust-card">
+
+    <div class="trust-icon">
+      💡
+    </div>
+
+    <h3>
+      Useful Picks
+    </h3>
+
+    <p>
+      We focus on products that can
+      solve everyday shopping needs.
+    </p>
+
+  </div>
+
+
+  <div class="trust-card">
+
+    <div class="trust-icon">
+      🔗
+    </div>
+
+    <h3>
+      Transparent Links
+    </h3>
+
+    <p>
+      Some links may be affiliate links
+      that can earn us a commission.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="footer-grid">
+
+    <div>
+
+      <h3>
+        ⚡ Deepak Dabi Deals
+      </h3>
+
+      <p>
+        Smart Products.
+        Honest Picks.
+        Better Shopping.
+      </p>
+
+      <p class="disclosure">
+
+        <strong>
+          Affiliate Disclosure:
+        </strong>
+
+        Some links on this website
+        may be affiliate links.
+        If you purchase through an
+        affiliate link, we may earn
+        a commission at no additional
+        cost to you.
+
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <h4>
+        Quick Links
+      </h4>
+
+      <a href="pages/about.html">
+        About Us
+      </a>
+
+      <a href="pages/contact.html">
+        Contact Us
+      </a>
+
+      <a href="pages/privacy.html">
+        Privacy Policy
+      </a>
+
+      <a href="pages/affiliate-disclosure.html">
+        Affiliate Disclosure
+      </a>
+
+      <a href="pages/terms.html">
+        Terms & Conditions
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026
+    <strong>
+      Deepak Dabi Deals
+    </strong>
+
+    — All Rights Reserved.
+
+  </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="app.js"></script>
+
+
+<script>
+
+function toggleMenu() {
+
+  document
+    .getElementById("nav")
+    .classList
+    .toggle("open");
+
+}
+
+
+if ("serviceWorker" in navigator) {
+
+  window.addEventListener(
+    "load",
+    function () {
+
+      navigator.serviceWorker
+        .register("sw.js")
+        .then(function () {
+
+          console.log(
+            "PWA Service Worker Registered"
+          );
+
+        })
+        .catch(function (error) {
+
+          console.log(
+            "Service Worker Error:",
+            error
+          );
+
+        });
+
+    }
+  );
+
+}
+
+</script>
+
+
+</body>
+</html>
