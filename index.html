@@ -2,28 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Deepak Dabi Deals | Best Deals & Shopping Recommendations</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Discover useful products, best deals, discounts and shopping recommendations at Deepak Dabi Deals."
+    content="Deepak Dabi Deals - Best Amazon Deals, Electronics, Fashion, Mobiles and More."
   >
 
-  <meta
-    name="keywords"
-    content="Deepak Dabi Deals, Amazon deals, best products, electronics, earbuds, shopping deals"
-  >
-
-  <meta name="author" content="Deepak Dabi">
-
-  <meta property="og:title" content="Deepak Dabi Deals">
-  <meta
-    property="og:description"
-    content="Discover useful products and amazing shopping deals."
-  >
-  <meta property="og:type" content="website">
+  <title>Deepak Dabi Deals | Best Amazon Deals</title>
 
   <style>
     * {
@@ -32,299 +22,113 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f5f7fb;
-      color: #172033;
-      line-height: 1.6;
+      color: #1f2937;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
-
+    /* HEADER */
     header {
-      background: #111827;
+      background: linear-gradient(
+        135deg,
+        #111827,
+        #1e3a8a
+      );
       color: white;
+      padding: 25px 20px;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     }
 
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      min-height: 70px;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .logo span {
-      color: #ff9900;
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-    }
-
-    nav a {
-      color: #fff;
-      font-weight: 600;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ff9900;
-    }
-
-    .menu-btn {
-      display: none;
-      background: transparent;
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 8px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 20px;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      background:
-        linear-gradient(135deg, #111827, #1e3a8a);
-      color: white;
-      padding: 80px 20px;
-    }
-
-    .hero-content {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(36px, 5vw, 64px);
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: #ff9900;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #dbeafe;
-      max-width: 650px;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 22px;
-      border-radius: 10px;
-      font-weight: 700;
-      transition: 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: #ff9900;
-      color: #111827;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(255,153,0,0.35);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.1);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.2);
-    }
-
-    .hero-card {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 20px;
-      padding: 30px;
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-card h3 {
-      color: #ff9900;
-      margin-bottom: 12px;
-    }
-
-    .hero-card ul {
-      list-style: none;
-    }
-
-    .hero-card li {
-      padding: 8px 0;
-    }
-
-    /* =========================
-       SEARCH
-    ========================= */
-
-    .search-section {
-      max-width: 1000px;
-      margin: -30px auto 0;
-      padding: 0 20px;
-      position: relative;
-      z-index: 10;
-    }
-
-    .search-box {
-      background: white;
-      border-radius: 15px;
-      padding: 12px;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.12);
-      display: flex;
-      gap: 10px;
-    }
-
-    .search-box input {
-      flex: 1;
-      border: none;
-      outline: none;
-      padding: 14px;
-      font-size: 16px;
-    }
-
-    .search-box button {
-      border: none;
-      background: #111827;
-      color: white;
-      padding: 0 25px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    /* =========================
-       COMMON SECTION
-    ========================= */
-
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 70px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      font-size: 34px;
+    header h1 {
+      font-size: 32px;
       margin-bottom: 8px;
     }
 
-    .section-title p {
-      color: #64748b;
+    header p {
+      opacity: 0.9;
+      font-size: 15px;
     }
 
-    /* =========================
-       CATEGORIES
-    ========================= */
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+    /* SEARCH */
+    .search-area {
+      max-width: 1000px;
+      margin: 25px auto 10px;
+      padding: 0 20px;
     }
 
-    .category {
+    #searchInput {
+      width: 100%;
+      padding: 16px 20px;
+      border: none;
+      border-radius: 50px;
       background: white;
-      padding: 25px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(15,23,42,0.06);
-      transition: 0.3s;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      font-size: 16px;
+      outline: none;
+    }
+
+    /* FILTER BUTTONS */
+    .filters {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      border: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: white;
       cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: 0.3s;
     }
 
-    .category:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(15,23,42,0.12);
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #2563eb;
+      color: white;
+      transform: translateY(-2px);
     }
 
-    .category-icon {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
+    /* PRODUCTS */
+    .products-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
 
-    .category h3 {
-      font-size: 17px;
-    }
-
-    /* =========================
-       PRODUCT GRID
-    ========================= */
-
-    .products {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(auto-fit, minmax(270px, 1fr));
+
       gap: 25px;
     }
 
     .product-card {
       background: white;
-      border-radius: 18px;
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 7px 25px rgba(15,23,42,0.08);
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
       transition: 0.3s;
       position: relative;
     }
 
     .product-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(15,23,42,0.14);
+      transform: translateY(-8px);
+      box-shadow:
+        0 15px 40px rgba(0,0,0,0.15);
     }
 
     .deal-badge {
@@ -333,30 +137,27 @@
       left: 15px;
       background: #dc2626;
       color: white;
-      padding: 6px 10px;
-      border-radius: 6px;
+      padding: 7px 12px;
+      border-radius: 20px;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: bold;
       z-index: 2;
     }
 
     .product-image {
-      height: 240px;
+      height: 230px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #f8fafc;
-      padding: 20px;
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+      background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #f8fafc
+      );
     }
 
     .placeholder-image {
-      font-size: 70px;
+      font-size: 90px;
     }
 
     .product-info {
@@ -365,16 +166,16 @@
 
     .product-category {
       color: #2563eb;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     .product-info h3 {
       font-size: 19px;
       line-height: 1.4;
-      margin-bottom: 10px;
+      min-height: 55px;
+      margin-bottom: 12px;
     }
 
     .rating {
@@ -383,807 +184,492 @@
     }
 
     .price {
-      font-size: 25px;
-      font-weight: 800;
-      color: #111827;
-      margin-bottom: 4px;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
 
     .price-note {
-      color: #64748b;
       font-size: 12px;
+      color: #6b7280;
       margin-bottom: 18px;
     }
 
+    /* AMAZON BUTTON */
     .amazon-btn {
+      display: block;
       width: 100%;
+      text-align: center;
+
       background: #ff9900;
       color: #111827;
-      padding: 13px;
-      border-radius: 9px;
-      display: block;
-      text-align: center;
-      font-weight: 800;
+
+      padding: 13px 15px;
+      border-radius: 10px;
+
+      text-decoration: none;
+      font-weight: bold;
+
       transition: 0.3s;
     }
 
     .amazon-btn:hover {
-      background: #e68a00;
-      transform: translateY(-2px);
+      background: #ffb52e;
+      transform: scale(1.02);
     }
 
-    /* =========================
-       FEATURES
-    ========================= */
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .feature {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
+    /* NO RESULTS */
+    #noResults {
+      display: none;
       text-align: center;
-      box-shadow: 0 5px 20px rgba(15,23,42,0.06);
+      padding: 50px;
+      font-size: 20px;
+      color: #6b7280;
     }
 
-    .feature-icon {
-      font-size: 40px;
-      margin-bottom: 12px;
+    /* FOOTER */
+    footer {
+      margin-top: 50px;
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
     }
 
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about {
-      background: white;
-      border-radius: 20px;
-      padding: 45px;
-      box-shadow: 0 5px 25px rgba(15,23,42,0.06);
-    }
-
-    .about h2 {
-      margin-bottom: 15px;
-    }
-
-    .about p {
-      color: #475569;
-      margin-bottom: 12px;
-    }
-
-    /* =========================
-       DISCLOSURE
-    ========================= */
-
-    .disclosure {
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
-      color: #7c2d12;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 30px;
+    footer p {
+      margin: 8px 0;
       font-size: 14px;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #111827;
-      color: white;
-      padding: 45px 20px 25px;
+    .disclaimer {
+      max-width: 800px;
+      margin: 15px auto 0;
+      color: #9ca3af;
+      font-size: 12px;
+      line-height: 1.6;
     }
 
-    .footer-content {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-    }
-
-    footer h3 {
-      margin-bottom: 15px;
-    }
-
-    footer p,
-    footer a {
-      color: #cbd5e1;
-    }
-
-    footer a:hover {
-      color: #ff9900;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .copyright {
-      max-width: 1200px;
-      margin: 35px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      text-align: center;
-      color: #94a3b8;
-      font-size: 13px;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 900px) {
-
-      .hero-content {
-        grid-template-columns: 1fr;
-      }
-
-      .categories {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .products {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-content {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      nav {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: #111827;
-        padding: 20px;
-        flex-direction: column;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-    }
-
+    /* MOBILE */
     @media (max-width: 600px) {
 
-      .hero {
-        padding: 60px 20px;
+      header h1 {
+        font-size: 25px;
       }
 
-      .categories,
-      .products {
+      .products-container {
         grid-template-columns: 1fr;
       }
 
-      .search-box {
-        flex-direction: column;
+      .product-info h3 {
+        min-height: auto;
       }
 
-      .search-box button {
-        padding: 14px;
-      }
-
-      .footer-content {
-        grid-template-columns: 1fr;
-      }
-
-      .about {
-        padding: 25px;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
-
+  <!-- HEADER -->
   <header>
-    <div class="navbar">
 
-      <a href="#" class="logo">
-        Deepak <span>Dabi Deals</span>
-      </a>
+    <h1>
+      🛍️ Deepak Dabi Deals
+    </h1>
 
-      <button class="menu-btn" onclick="toggleMenu()">
-        ☰
-      </button>
+    <p>
+      Best Deals • Trending Products • Amazon Offers
+    </p>
 
-      <nav id="mainNav">
-        <a href="#home">Home</a>
-        <a href="#categories">Categories</a>
-        <a href="#deals">Best Deals</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-    </div>
   </header>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- SEARCH -->
+  <div class="search-area">
 
-  <section class="hero" id="home">
-
-    <div class="hero-content">
-
-      <div>
-
-        <h1>
-          Discover <span>Best Deals</span>
-          & Smart Products
-        </h1>
-
-        <p>
-          Welcome to Deepak Dabi Deals — discover useful products,
-          trending electronics, shopping recommendations and exciting
-          deals from trusted online marketplaces.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a href="#deals" class="btn btn-primary">
-            🔥 Explore Best Deals
-          </a>
-
-          <a href="#categories" class="btn btn-secondary">
-            🛍️ Browse Categories
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="hero-card">
-
-        <h3>🔥 Why Shop With Us?</h3>
-
-        <ul>
-          <li>✅ Curated product recommendations</li>
-          <li>✅ Discover popular deals</li>
-          <li>✅ Easy shopping experience</li>
-          <li>✅ Direct links to Amazon</li>
-          <li>✅ Updated product discoveries</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       SEARCH
-  ========================= -->
-
-  <div class="search-section">
-
-    <div class="search-box">
-
-      <input
-        type="search"
-        id="searchInput"
-        placeholder="Search products and deals..."
-        onkeyup="searchProducts()"
-      >
-
-      <button onclick="searchProducts()">
-        🔍 Search
-      </button>
-
-    </div>
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="🔍 Search products..."
+      autocomplete="off"
+    >
 
   </div>
 
 
-  <!-- =========================
-       CATEGORIES
-  ========================= -->
+  <!-- FILTERS -->
+  <div class="filters">
 
-  <section class="section" id="categories">
+    <button
+      class="filter-btn active"
+      onclick="filterProducts('all', this)"
+    >
+      All Deals
+    </button>
 
-    <div class="section-title">
+    <button
+      class="filter-btn"
+      onclick="filterProducts('electronics', this)"
+    >
+      Electronics
+    </button>
 
-      <h2>Shop By Category</h2>
+    <button
+      class="filter-btn"
+      onclick="filterProducts('fashion', this)"
+    >
+      Fashion
+    </button>
 
-      <p>
-        Explore popular product categories
-      </p>
+    <button
+      class="filter-btn"
+      onclick="filterProducts('mobile', this)"
+    >
+      Mobiles
+    </button>
 
-    </div>
+  </div>
 
 
-    <div class="categories">
+  <!-- PRODUCTS -->
+  <main
+    class="products-container"
+    id="productsContainer"
+  >
 
-      <div class="category">
-        <div class="category-icon">📱</div>
-        <h3>Mobiles & Accessories</h3>
+
+    <!-- PRODUCT 1 -->
+    <article
+      class="product-card"
+      data-category="electronics"
+      data-name="boat airdopes joy earbuds tws wireless earphones"
+    >
+
+      <div class="deal-badge">
+        🔥 Hot Deal
       </div>
 
-      <div class="category">
-        <div class="category-icon">🎧</div>
-        <h3>Audio & Earbuds</h3>
+      <div class="product-image">
+        <div class="placeholder-image">
+          🎧
+        </div>
       </div>
 
-      <div class="category">
-        <div class="category-icon">💻</div>
-        <h3>Electronics</h3>
-      </div>
+      <div class="product-info">
 
-      <div class="category">
-        <div class="category-icon">🏠</div>
-        <h3>Home & Kitchen</h3>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       BEST DEALS
-  ========================= -->
-
-  <section class="section" id="deals">
-
-    <div class="section-title">
-
-      <h2>🔥 Today's Featured Deals</h2>
-
-      <p>
-        Hand-picked products you may find useful
-      </p>
-
-    </div>
-
-
-    <div class="products" id="productGrid">
-
-
-      <!-- =========================
-           PRODUCT 1
-           YOUR AMAZON AFFILIATE PRODUCT
-      ========================= -->
-
-      <article class="product-card"
-               data-name="boat airdopes joy wireless earbuds">
-
-        <div class="deal-badge">
-          Featured Deal
+        <div class="product-category">
+          Electronics
         </div>
 
+        <h3>
+          boAt Airdopes Joy Wireless Earbuds
+        </h3>
 
-        <div class="product-image">
-
-          <!--
-            Add your approved product image here:
-
-            images/boat-airdopes-joy.jpg
-
-            Example:
-
-            <img
-              src="images/boat-airdopes-joy.jpg"
-              alt="boAt Airdopes Joy Wireless Earbuds"
-            >
-          -->
-
-          <div class="placeholder-image">
-            🎧
-          </div>
-
+        <div class="rating">
+          ⭐⭐⭐⭐☆
         </div>
 
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Audio & Earbuds
-          </div>
-
-
-          <h3>
-            boAt Airdopes Joy Wireless Earbuds
-          </h3>
-
-
-          <div class="rating">
-            ⭐⭐⭐⭐☆ 3.7/5
-          </div>
-
-
-          <div class="price">
-            Check Latest Price
-          </div>
-
-
-          <div class="price-note">
-            Price and availability may change on Amazon.
-          </div>
-
-
-          <!-- AMAZON AFFILIATE BUTTON -->
-
-          <a
-            href="https://www.amazon.in/Airdopes-Battery-Bluetooth-Wireless-Earphones/dp/B0FL2SJTB2?linkCode=ll2&tag=deepakdabidea-21&linkId=f52857ad3bee6961a35a026da6a878f7&ref_=as_li_ss_tl"
-            target="_blank"
-            rel="nofollow sponsored noopener"
-            class="amazon-btn"
-          >
-            🛒 Check Price on Amazon
-          </a>
-
+        <div class="price">
+          Check Latest Price
         </div>
 
-      </article>
-
-
-      <!-- =========================
-           PRODUCT 2 PLACEHOLDER
-      ========================= -->
-
-      <article class="product-card"
-               data-name="smart electronics deal">
-
-        <div class="deal-badge">
-          Coming Soon
+        <div class="price-note">
+          Price and availability may change on Amazon.
         </div>
 
-        <div class="product-image">
-          <div class="placeholder-image">
-            📱
-          </div>
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Electronics
-          </div>
-
-          <h3>
-            New Electronics Deal
-          </h3>
-
-          <div class="rating">
-            ⭐⭐⭐⭐⭐
-          </div>
-
-          <div class="price">
-            Coming Soon
-          </div>
-
-          <div class="price-note">
-            More products will be added soon.
-          </div>
-
-          <a href="#"
-             class="amazon-btn"
-             onclick="return false;">
-            🔜 Coming Soon
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- =========================
-           PRODUCT 3 PLACEHOLDER
-      ========================= -->
-
-      <article class="product-card"
-               data-name="mobile accessories deal">
-
-        <div class="deal-badge">
-          Coming Soon
-        </div>
-
-        <div class="product-image">
-          <div class="placeholder-image">
-            🔌
-          </div>
-        </div>
-
-        <div class="product-info">
-
-          <div class="product-category">
-            Accessories
-          </div>
-
-          <h3>
-            Trending Mobile Accessories
-          </h3>
-
-          <div class="rating">
-            ⭐⭐⭐⭐⭐
-          </div>
-
-          <div class="price">
-            Coming Soon
-          </div>
-
-          <div class="price-note">
-            More products will be added soon.
-          </div>
-
-          <a href="#"
-             class="amazon-btn"
-             onclick="return false;">
-            🔜 Coming Soon
-          </a>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       FEATURES
-  ========================= -->
-
-  <section class="section">
-
-    <div class="section-title">
-
-      <h2>Why Deepak Dabi Deals?</h2>
-
-      <p>
-        Simple, useful and deal-focused shopping discovery
-      </p>
-
-    </div>
-
-
-    <div class="features">
-
-      <div class="feature">
-
-        <div class="feature-icon">
-          🔎
-        </div>
-
-        <h3>Discover Products</h3>
-
-        <p>
-          Find interesting products and shopping recommendations
-          in one place.
-        </p>
+        <a
+          href="https://www.amazon.in/Airdopes-Battery-Bluetooth-Wireless-Earphones/dp/B0FL2SJTB2?linkCode=ll2&tag=deepakdabidea-21&linkId=f52857ad3bee6961a35a026da6a878f7&ref_=as_li_ss_tl"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+          class="amazon-btn"
+        >
+          🛒 Check Price on Amazon
+        </a>
 
       </div>
 
+    </article>
 
-      <div class="feature">
 
-        <div class="feature-icon">
-          💰
+    <!-- PRODUCT 2 -->
+    <article
+      class="product-card"
+      data-category="electronics"
+      data-name="zebronics rechargeable wireless multicolor"
+    >
+
+      <div class="deal-badge">
+        ⭐ Featured Deal
+      </div>
+
+      <div class="product-image">
+        <div class="placeholder-image">
+          🖱️
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-category">
+          Electronics & Accessories
         </div>
 
-        <h3>Find Better Deals</h3>
+        <h3>
+          ZEBRONICS Rechargeable Wireless Product
+        </h3>
 
-        <p>
-          Explore selected deals and product opportunities
-          available online.
-        </p>
-
-      </div>
-
-
-      <div class="feature">
-
-        <div class="feature-icon">
-          🛒
+        <div class="rating">
+          ⭐⭐⭐⭐☆
         </div>
 
-        <h3>Shop Easily</h3>
+        <div class="price">
+          Check Latest Price
+        </div>
 
-        <p>
-          Click through to the retailer and complete your purchase
-          directly on their website.
-        </p>
+        <div class="price-note">
+          Price and availability may change on Amazon.
+        </div>
 
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       ABOUT
-  ========================= -->
-
-  <section class="section" id="about">
-
-    <div class="about">
-
-      <h2>About Deepak Dabi Deals</h2>
-
-      <p>
-        Deepak Dabi Deals is a product discovery and deals website
-        created to help users find useful products, shopping ideas,
-        electronics and attractive online deals.
-      </p>
-
-      <p>
-        We provide product information and links that may direct users
-        to third-party shopping websites such as Amazon.in.
-      </p>
-
-
-      <div class="disclosure">
-
-        <strong>Affiliate Disclosure:</strong>
-
-        As an Amazon Associate, I earn from qualifying purchases.
-        When you click an affiliate link and make an eligible purchase,
-        I may earn a commission at no additional cost to you.
+        <a
+          href="https://www.amazon.in/ZEBRONICS-Launched-Rechargeable-Operation-Multicolor/dp/B0CQRNWJM2?linkCode=ll2&tag=deepakdabidea-21&linkId=70f95e1fc979826c8178a770961348bc&ref_=as_li_ss_tl"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+          class="amazon-btn"
+        >
+          🛒 Check Price on Amazon
+        </a>
 
       </div>
 
-    </div>
-
-  </section>
+    </article>
 
 
-  <!-- =========================
-       CONTACT
-  ========================= -->
+    <!-- PRODUCT 3 -->
+    <article
+      class="product-card"
+      data-category="fashion"
+      data-name="puma redeem racer running shoes men"
+    >
 
-  <section class="section" id="contact">
+      <div class="deal-badge">
+        👟 Fashion Deal
+      </div>
 
-    <div class="section-title">
+      <div class="product-image">
+        <div class="placeholder-image">
+          👟
+        </div>
+      </div>
 
-      <h2>Contact</h2>
+      <div class="product-info">
 
-      <p>
-        Have a product suggestion or deal recommendation?
-      </p>
+        <div class="product-category">
+          Fashion & Footwear
+        </div>
 
-    </div>
+        <h3>
+          PUMA Redeem Racer Running Shoes
+        </h3>
 
-    <div class="about">
+        <div class="rating">
+          ⭐⭐⭐⭐☆
+        </div>
 
-      <p>
-        For product suggestions, business inquiries or website feedback,
-        please contact Deepak Dabi.
-      </p>
+        <div class="price">
+          Check Latest Price
+        </div>
 
-      <p>
-        📧 Email: Add your email address here
-      </p>
+        <div class="price-note">
+          Price and availability may change on Amazon.
+        </div>
 
-    </div>
+        <a
+          href="https://www.amazon.in/PUMA-Redeem-Racer-Running-Shoes/dp/B0H277S8CQ?linkCode=ll2&tag=deepakdabidea-21&linkId=6061b4c36e3f21f2e3de1e81b3c4cf06&ref_=as_li_ss_tl"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+          class="amazon-btn"
+        >
+          🛒 Check Price on Amazon
+        </a>
 
-  </section>
+      </div>
+
+    </article>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+    <!-- PRODUCT 4 -->
+    <article
+      class="product-card"
+      data-category="fashion"
+      data-name="adidas vacfast running shoe black"
+    >
 
+      <div class="deal-badge">
+        👟 Featured Deal
+      </div>
+
+      <div class="product-image">
+        <div class="placeholder-image">
+          👟
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-category">
+          Fashion & Footwear
+        </div>
+
+        <h3>
+          adidas Vacfast Running Shoes
+        </h3>
+
+        <div class="rating">
+          ⭐⭐⭐⭐☆
+        </div>
+
+        <div class="price">
+          Check Latest Price
+        </div>
+
+        <div class="price-note">
+          Price and availability may change on Amazon.
+        </div>
+
+        <a
+          href="https://www.amazon.in/Adidas-Vacfast-Running-Shoe-Black/dp/B0FC2KSFC7?linkCode=ll2&tag=deepakdabidea-21&linkId=b0167bb49af12970ebfcd275dac09836&ref_=as_li_ss_tl"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+          class="amazon-btn"
+        >
+          🛒 Check Price on Amazon
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- PRODUCT 5 -->
+    <article
+      class="product-card"
+      data-category="mobile"
+      data-name="xiaomi 5g smartphone snapdragon mobile phone"
+    >
+
+      <div class="deal-badge">
+        📱 Hot Deal
+      </div>
+
+      <div class="product-image">
+        <div class="placeholder-image">
+          📱
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-category">
+          Mobiles & Electronics
+        </div>
+
+        <h3>
+          Xiaomi 5G Smartphone – Snapdragon Processor
+        </h3>
+
+        <div class="rating">
+          ⭐⭐⭐⭐☆
+        </div>
+
+        <div class="price">
+          Check Latest Price
+        </div>
+
+        <div class="price-note">
+          Price and availability may change on Amazon.
+        </div>
+
+        <a
+          href="https://www.amazon.in/Storage-Snapdragon-Segments-Slimmest-Charging/dp/B0G5G25YBQ?linkCode=ll2&tag=deepakdabidea-21&linkId=115365882c3a65b96c2eeba182d76703&ref_=as_li_ss_tl"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+          class="amazon-btn"
+        >
+          🛒 Check Price on Amazon
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </main>
+
+
+  <!-- NO RESULTS -->
+  <div id="noResults">
+    😔 No products found.
+  </div>
+
+
+  <!-- FOOTER -->
   <footer>
 
-    <div class="footer-content">
+    <p>
+      © 2026 Deepak Dabi Deals
+    </p>
 
-      <div>
+    <p>
+      All product links are Amazon affiliate links.
+    </p>
 
-        <h3>
-          Deepak Dabi Deals
-        </h3>
-
-        <p>
-          Discover useful products, deals and shopping recommendations.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Quick Links
-        </h3>
-
-        <div class="footer-links">
-
-          <a href="#home">Home</a>
-
-          <a href="#categories">Categories</a>
-
-          <a href="#deals">Best Deals</a>
-
-          <a href="#about">About</a>
-
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Shopping
-        </h3>
-
-        <div class="footer-links">
-
-          <a href="#deals">
-            Featured Products
-          </a>
-
-          <a href="#categories">
-            Categories
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="copyright">
-
-      © <span id="year"></span>
-      Deepak Dabi Deals. All rights reserved.
-
+    <div class="disclaimer">
+      As an Amazon Associate, I earn from qualifying purchases.
+      Product prices and availability may change.
+      Please check the final price on Amazon before purchasing.
     </div>
 
   </footer>
 
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
-
+  <!-- JAVASCRIPT -->
   <script>
 
-    // Mobile Menu
+    let currentCategory = "all";
 
-    function toggleMenu() {
 
-      const nav = document.getElementById("mainNav");
+    // FILTER PRODUCTS
+    function filterProducts(category, button) {
 
-      nav.classList.toggle("active");
+      currentCategory = category;
+
+      document
+        .querySelectorAll(".filter-btn")
+        .forEach(btn => {
+          btn.classList.remove("active");
+        });
+
+      button.classList.add("active");
+
+      applyFilters();
 
     }
 
 
-    // Product Search
+    // SEARCH
+    document
+      .getElementById("searchInput")
+      .addEventListener("input", function() {
 
-    function searchProducts() {
+        applyFilters();
 
-      const input =
+      });
+
+
+    // APPLY SEARCH + CATEGORY
+    function applyFilters() {
+
+      const searchText =
         document
           .getElementById("searchInput")
           .value
@@ -1191,19 +677,38 @@
           .trim();
 
       const products =
-        document.querySelectorAll(".product-card");
+        document
+          .querySelectorAll(".product-card");
+
+      let visibleCount = 0;
 
 
       products.forEach(product => {
 
+        const category =
+          product.dataset.category;
+
         const name =
-          product
-            .getAttribute("data-name")
-            .toLowerCase();
+          product.dataset.name;
 
-        if (name.includes(input)) {
 
-          product.style.display = "";
+        const categoryMatch =
+          currentCategory === "all" ||
+          category === currentCategory;
+
+
+        const searchMatch =
+          name.includes(searchText);
+
+
+        if (
+          categoryMatch &&
+          searchMatch
+        ) {
+
+          product.style.display = "block";
+
+          visibleCount++;
 
         } else {
 
@@ -1213,31 +718,15 @@
 
       });
 
+
+      document
+        .getElementById("noResults")
+        .style.display =
+          visibleCount === 0
+          ? "block"
+          : "none";
+
     }
-
-
-    // Current Year
-
-    document
-      .getElementById("year")
-      .textContent = new Date().getFullYear();
-
-
-    // Close mobile menu after clicking link
-
-    document
-      .querySelectorAll("#mainNav a")
-      .forEach(link => {
-
-        link.addEventListener("click", () => {
-
-          document
-            .getElementById("mainNav")
-            .classList.remove("active");
-
-        });
-
-      });
 
   </script>
 
